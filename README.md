@@ -1,2 +1,27 @@
-# rm-assignment-2022
-Research Methods 2022/2023- Qualitative Assignment
+# Research Methods 2022/2023- Quantitate Assignment
+
+This repository is about a assignment from Research Methods discipline from
+University of Coimbra, in the year 2022/2013. It is a exercise of designig
+an experiment, which aims to perform quantitate analisys.
+
+## Problem to be analyzed
+
+Given a directed graph, the [Maximum Flow Problem](https://en.wikipedia.org/wiki/Maximum_flow_problem)
+consists of finding the maximum flow that can sent from a source vertex to a
+target vertex, without exceeding the capacity of each arc. We assume that a
+capacity of each arc is a positive integer. This problem arises in many real-life
+applications, for instance, to find a set of disjoint paths in a communications
+network taking into account the maximum bandwidth between every two network nodes.
+
+There are several algorithms to solve this problem for a given input. For this
+project, we will consider three algorithms for the maximum flow problem:
+Edmond-Karp (EK), Dinic, and Malhotra, Pramodh-Kumar and Maheshwari (MPM). For
+a given graph G=(V, A), where V is the vertex set and A is the arc set, EK
+Algorithm has a time complexity of O(|V||A|²), whereas Dinic has O(|A||V|2²)
+and MPM has O(|V|³). Therefore, the first is better suited for graphs with few
+arcs, while the last two are better for graphs with fewer vertices. However,
+these are theoretical results that only apply to the worst case and it is hard
+to extrapolate them for a given particular problem input.
+
+The goal is to investigate the runtime performance of these three algorithms in
+practice.
