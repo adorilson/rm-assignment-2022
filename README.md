@@ -25,3 +25,29 @@ to extrapolate them for a given particular problem input.
 
 The goal is to investigate the runtime performance of these three algorithms in
 practice.
+
+## Input data
+
+To generate input data we can use the `gen.py` file. For example, to generated
+input data with 10 vertices, 40% of probability of generating an arc between two
+vertices, 100 as the maximum capacity that can be assigned to an arc, a random
+seed 3125, and store it in file `data.in`, we use the follow command:
+
+```
+$ python3 gen.py 10 0.4 100 3125 data.in
+```
+
+We generated input data with the `gen_all_data.sh` script, that run the `gen.py`
+scripts some times, with different arguments:
+
+```
+$ ./gen_all_data.sh
+```
+
+This script generate the input data for graphs with the parameters follows:
+1. vertices: range from 50 to 1600, where each step is the previous times 2
+1. arc probability: 5, 10, 20, 40 and 80%.
+1. maximum capacity: 5 to 320, where each step is the previous times 2
+
+The seeds was `vertices+arc probability+maximum capacity`, and this data are in
+`inputs` folder.
