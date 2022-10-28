@@ -113,7 +113,7 @@ int main(int argc, char **argv) {
   int64_t ans = ek(adj, cap, 0, v-1, timer);
   double elapsed = timer.elapsed();
 
-  std::cout << (elapsed > timeout ? -1 : ans) << "\n";
+  std::cout << (elapsed > timeout ? -1 : ans) << " ";
   std::cout << elapsed << "\n";
 
   return 0;

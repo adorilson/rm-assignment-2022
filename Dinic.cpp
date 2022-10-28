@@ -137,7 +137,7 @@ int main(int argc, char **argv) {
   long long ans = d.flow(timer);
   double elapsed = timer.elapsed();
 
-  std::cout << (elapsed > timeout ? -1 : ans) << "\n";
+  std::cout << (elapsed > timeout ? -1 : ans) << " ";
   std::cout << elapsed << "\n";
 
   return 0;

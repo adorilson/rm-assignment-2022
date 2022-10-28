@@ -228,7 +228,7 @@ int main(int argc, char **argv) {
   int64_t ans = m.flow(timer);
   double elapsed = timer.elapsed();
 
-  std::cout << (elapsed > timeout ? -1 : ans) << "\n";
+  std::cout << (elapsed > timeout ? -1 : ans) << " ";
   std::cout << elapsed << "\n";
 
   return 0;
