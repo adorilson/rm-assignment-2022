@@ -20,7 +20,7 @@ for vertices in 100 200 400 800 1600; do
       result+=$(./MPM 300 $input)";"
       result+=$(./EK 300 $input)
 
-      echo $result | sed 's/ /;/g' > $output
+      echo $result | sed 's/ /;/g' >> $output
 
     done
   done
