@@ -64,3 +64,36 @@ g++ -std=c++11 -O3 -DNDEBUG -Wall -Wextra -pedantic -o EK EK.cpp
 g++ -std=c++11 -O3 -DNDEBUG -Wall -Wextra -pedantic -o MPM MPM.cpp
 ```
 
+## Running the algorithms for solving the maximun flow problem
+
+The three algorithms receive 2 params: the maximum CPU-time in seconds to run
+the program and the name of the file that contains the input graph. For example,
+to run 'Dinic' with a cut-off time of 100 sec and the input file `data.in` we can
+this:
+
+```
+$ ./Dinic 100 data.in
+8 3.219e-06
+```
+
+The output means that Dinic algorithm found the maximum flow as 8 in 3.219e-06 sec.
+
+Due `gen.py` with 50 vertices have some generated unfeasible graphics, we
+discarded this all this graphs. The same way `gen.py` with 100 vertices and
+5% of probability of generating an arc between two vertices also have generated
+a unfeasible graphis, we also have discarted all graphics with 5% of probability of generating an arc between two vertices.
+
+So, we executed the three programs againts the input data and putted all results
+together in a CSV file to analysis. This was automated with the
+`runner_all_programs.sh` script and we used 300 seconds as maximum CPU-time:
+
+```
+$ ./runner_all_programs.sh
+```
+
+### The output file layout
+
+The output file is a CSV file, which we called `simulation.csv`, with `;` as separator.
+The columns are: vertices, arcprob, maxcapacity, dimic_capacity, dimic_time, capacity_mpm, mpm_time, ek_capacity, ek_time.
+
+The columns `*_capacity` are supposed has the same value for the three programs.
