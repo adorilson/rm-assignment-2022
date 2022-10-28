@@ -52,7 +52,7 @@ This script generate the input data for graphs with the parameters follows:
 The seeds was `vertices+arc probability+maximum capacity`, and this data are in
 `inputs` folder.
 
-## Compilling the algoritms code
+## Compilling the algorithms code
 
 There are three programs written in C++ (EK.cpp, Dinic.cpp, MPM.cpp) that implements
 the algorithms above. They can compiled with the `Makefile`.
